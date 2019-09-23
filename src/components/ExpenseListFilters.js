@@ -12,7 +12,7 @@ import { setTextFilter, sortByAmount, sortByDate, setStartDate, setEndDate } fro
         this.props.dispatch(setEndDate(endDate));
      };
      onFocusChange =(calendarFocused)=>{
-         this.setState(() => ({ calendarFocused }));
+        this.setState(() => ({ calendarFocused }));
      }
      render(){
          return  (

@@ -19,6 +19,7 @@ import 'normalize.css/normalize.css';
 import './styles/styles.scss';
 import AppRouter from './routers/AppRouter';
 
+
 const store = configureStore();
 const jsx = (
     <Provider store={store}>
