@@ -20,9 +20,8 @@ export const deletePost = (id) => ({
     type: "DELETE_POST",
     id
 });
-export const editProfileInfo = (id, updates) => ({
+export const editProfileInfo = (updates) => ({
     type: "EDIT_PROFILE_INFO",
-    id,
     updates
 });
 export const likeThePost = (id) => ({

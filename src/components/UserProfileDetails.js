@@ -34,6 +34,11 @@ class UserProfileDetails extends React.Component{
     handleEditClick = ()=>{
         this.setState((state,props)=>({
              enableInput: !state.enableInput
+        }));
+        this.props.dispatch(editProfileInfo({
+            name: this.state.name,
+            place: this.state.place,
+            description: this.state.description
         }))
     }
    handlecloseuserDetailsPopup=()=>{
