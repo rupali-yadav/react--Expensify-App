@@ -7,6 +7,7 @@ import {
 import expenseReducer from './../reducers/expenses';
 import filterReducer from './../reducers/filters';
 import voucherHistoryReducer from './../reducers/voucherHistory';
+import jioFacebookReducer from "./../reducers/jioFacebook";
 import thunk from 'redux-thunk';
 
 export default () => {
@@ -15,7 +16,8 @@ export default () => {
         combineReducers({
             expenses: expenseReducer,
             filters: filterReducer,
-            vouchers: voucherHistoryReducer
+            vouchers: voucherHistoryReducer,
+            jioFacebook: jioFacebookReducer
         }),
         composeEnhancers(applyMiddleware(thunk))
         // window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()

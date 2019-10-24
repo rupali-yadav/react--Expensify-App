@@ -7,7 +7,7 @@ import HelpPage from './../components/HelpPage';
 import NotFoundPage from './../components/NotFoundPage';
 import HistoryPage from './../components/HistoryPage'
 import Header from './../components/Header';
-
+import JioFacebook from './../components/JioFacebookPage'; 
 const AppRouter = ()=>(
     <BrowserRouter>
         <div>
@@ -18,6 +18,7 @@ const AppRouter = ()=>(
                 <Route path="/edit/:id" component={EditExpensePage} ></Route>
                 <Route path="/help" component={HelpPage} ></Route>
                 <Route path="/history" component={HistoryPage}></Route>
+                <Route path="/jiofacebook" component={JioFacebook}></Route>
                 <Route component={NotFoundPage} ></Route>
             </Switch>
         </div>

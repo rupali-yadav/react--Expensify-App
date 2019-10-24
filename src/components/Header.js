@@ -7,6 +7,7 @@ const Header = () =>(
         <NavLink to="/create" activeClassName="is-active">Create Page</NavLink>
         <NavLink to="/help" activeClassName="is-active">Help Page</NavLink>
         <NavLink to="/history" activeClassName="is-active">History</NavLink>
+        <NavLink to="/jiofacebook" activeClassName="is-active">Jio Facebook</NavLink>
     </header>
 );
 export default Header;
