@@ -7,9 +7,10 @@
 }
 
 .jioFacebookPageContainer {
-    padding: 40px 20px 20px 20px;
+
     margin: 0 auto;
     text-align: center;
+    background: #E9EBEE;
 
     .pageHeader {
         display: flex;
@@ -17,29 +18,81 @@
         justify-content: space-between;
         padding: 10px 20px;
         position: relative;
+        background: #4267B2;
+        height: 30px;
+        color: #fff;
 
-        .UserDetailsPopUp {
-          position: absolute;
-          top: 100%;
-          right: -1px;
-          z-index: 2;
+        h3 {
+            flex-grow: 1;
         }
 
-        .profilePicContainer {
+        .headerActions {
             display: flex;
-            flex-direction: column;
             align-items: center;
+            justify-content: flex-end;
+            flex-grow: 2;
 
-            p {
-                margin-bottom: 0;
+            .home {
+                margin-left: 20px;
             }
+        }
 
-            span {
-                width: 80px;
-                height: 80px;
-                border-radius: 50%;
-                background: skyblue;
+        .UserDetailsPopUp {
+            position: absolute;
+            top: 100%;
+            right: -1px;
+            z-index: 2;
+        }
+
+
+    }
+
+    .jioFacebookPageContentWrapper {
+        padding: 40px 20px 20px 20px;
+        display: flex;
+        justify-content: space-between;
+
+        .leftContentContainer {
+            flex-grow: 2;
+
+            .createPostContainer {
+                border-radius: 3px;
+                text-align: left;
+                background: #fff;
+
+                span {
+                    padding: 5px 10px;
+                    font: 14px;
+                    display: block;
+                    background: #F5F6F7;
+                }
+
+                .creatPostInput {
+                    padding: 5px 10px;
+                    display: flex;
+                    flex-direction: column;
+
+                    input {
+                        height: 40px;
+                        padding: 10px;
+                        border: none;
+                    }
+
+                    button {
+                        background: #4267B2;
+                        border: none;
+                        border-radius: 3px;
+                        padding: 5px 10px;
+                        color: #fff;
+                    }
+                }
             }
+        }
+
+        .rightContentContainer {
+            flex-grow: 1;
+            margin-left: 20px;
+            background: #fff;
         }
     }
 }
@@ -47,15 +100,20 @@
 .allSectionsContainer {
     display: flex;
     height: 100vh;
-    border: 1px solid #D7D7D7;
-    padding: 20px;
+    // border: 1px solid #D7D7D7;
+    // padding: 20px;
     justify-content: space-between;
+    // background: #fff;
+    margin-top: 20px;
+    border: none;
+    border-radius: 2px;
+
 }
 
 .facebookSectionContainer {
-    border: 1px solid #D7D7D7;
-    background: #FFFFFF;
-    padding: 10px;
+    height: 100%;
+    width: 100%;
+    // background: #FFFFFF;
     display: flex;
     flex-grow: 1;
     flex-direction: column;
@@ -83,13 +141,26 @@
 .postContainer {
     padding: 10px 10px 5px 10px;
     margin-bottom: 10px;
-    border: 1px solid blue;
+    // border: 1px solid blue;
     color: black;
     position: relative;
-
+    background: #fff;
     .postContainerWrapper {
         width: 90%;
         margin: 0 auto;
+
+        .userTitleContainer {
+            .profilePicContainer {
+                button {
+                    background: white;
+                    padding: 4px;
+                    height: 20px;
+                    width: 20px;
+                    font-size: 10px;
+                }
+            }
+        }
+
 
         .menuPopUp {
             position: absolute;
@@ -117,13 +188,7 @@
             align-items: center;
             padding: 10px 5px;
 
-            button {
-                background: white;
-                padding: 4px;
-                height: 20px;
-                width: 20px;
-                font-size: 10px;
-            }
+
 
             .menuToggleContainer {
                 width: 30px;
@@ -187,10 +252,32 @@
 
 .postActionsConatiner {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
 
     button {
         background: none;
         border: none;
+    }
+}
+
+.profilePicContainer {
+    display: flex;
+    // flex-direction: column;
+    align-items: center;
+    .crossbtn{
+        position: absolute;
+        right: 20px;
+    }
+
+    p {
+        margin: 0;
+        margin-left: 10px;
+    }
+
+    span {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background: skyblue;
     }
 }

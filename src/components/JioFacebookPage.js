@@ -27,13 +27,17 @@ class JioFacebookPage extends React.Component{
     };
     render(){
         return(
-            <div className="jioFacebookPageContainer">
+            <div className="jioFacebookPageContainer"> 
                 <div className="pageHeader">
-                    <h1>Welcome to ABC</h1>
-                    <div className="profilePicContainer" onClick={this.handleProfilePic}>
-                        <span></span>
-                        <p>{this.props.userDetails.name}</p>
+                    <h3>Welcome to ABC</h3>
+                    <div className="headerActions">
+                        <div className="profilePicContainer" onClick={this.handleProfilePic}>
+                            <span></span>
+                            <p>{this.props.userDetails.name}</p>
+                        </div>
+                        <div className="home">home</div>
                     </div>
+                    
 
                     {
                         this.props.showUserDetailsTab &&
@@ -41,17 +45,31 @@ class JioFacebookPage extends React.Component{
                             <UserProfileDetails />
                         </div>
                     }
-                </div>   
-                <input 
-                 type = "text"
-                 placeholder = "tell us how was your day"
-                 onChange={this.handleCreatePostInput} 
-                 value={this.state.NewPostDescription}/>
-                <button onClick={this.handleCreatePost}>create post</button>
-                <div className="allSectionsContainer">
-                    <JioFacebookPostsList />
-                    <LikesSection />
                 </div>
+                
+                <div className="jioFacebookPageContentWrapper">
+                    <div className="leftContentContainer">
+                        <div className="createPostContainer">
+                            <span>Create Post</span>
+                            <div className="creatPostInput">
+                                <input 
+                                    type = "text"
+                                    placeholder = "Write something here..."
+                                    onChange={this.handleCreatePostInput} 
+                                    value={this.state.NewPostDescription} 
+                                />
+                            <button onClick={this.handleCreatePost}>post</button>
+                            </div>
+                        </div>
+                        <div className="allSectionsContainer">
+                            <JioFacebookPostsList />
+                        </div>
+                    </div>
+                    <div className="rightContentContainer">
+                            <LikesSection />
+                    </div>
+                </div>
+                
             </div>
         )
     }

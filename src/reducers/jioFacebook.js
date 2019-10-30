@@ -1,20 +1,18 @@
 const jioFacebookReducerDefaultstate = {
     postList: [
-        // {
-        //     "id": "c6f73381-7942-43d8-ab46-5a86c4165a85",
-        //     "description": "hi",
-        //     "likesCount": 0,
-        //     "commentsCount": 0,
-        //     "comments": [
-        //         "jo",
-        //         "lo"
-        //     ]
-        // }
+       {
+           "id": "a47895c3-af8e-4318-a5bb-54570dc10016",
+           "description": "hello",
+           "likesCount": 0,
+           "commentsCount": 0,
+           "comments": []
+       }
     ],
     userDetails: {
         place: "",
         description: "",
-        name: "Rupali Yadav"
+        name: "Rupali",
+        birthday:""
     },
     showUserDetailsTab: false
 

@@ -45,13 +45,21 @@ class JioFacebookPostItem extends React.Component{
     return(
           <div className="postContainer">
              <div className="postContainerWrapper">
-                 
+                  <div className="userTitleContainer">
+                      <div className="profilePicContainer">
+                            <span></span>
+                            <p>Rupali</p>
+                            <div className="crossbtn">
+                              <button onClick={this.handleDeleteClick}>
+                                 X
+                              </button>    
+                            </div>
+                      </div>
+                  </div>
                   <div className="postTopContainer">
                       <div className="description">
                         {this.props.description}
                       </div>
-                      <button onClick={this.handleDeleteClick}>X</button>
-                      
                   </div>
                   { this.state.showCommentInput &&
                     <div className="commentInput">
@@ -77,7 +85,6 @@ class JioFacebookPostItem extends React.Component{
                     <div className="postActionsConatiner">
                         <button onClick={this.handleLikeClick}> likes-{this.props.likesCount}</button>
                         <button onClick={this.handleCommentClick}> comment</button>
-                        <button onClick={this.handleShareClick}> share</button>
                     </div>
             </div>
           </div>

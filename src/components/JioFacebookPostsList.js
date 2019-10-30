@@ -4,7 +4,7 @@ import { connect } from "react-redux";
 const JioFacebookPostsList = (props) => (
     <div className="facebookSectionContainer">
         
-         {props.postsList.length>0?<h1>View all your posts here</h1>:<h1>you have no posts yet</h1>}
+         {props.postsList.length===0 && <h1>you have no posts yet</h1>}
         {
             props.postsList &&
             props.postsList.map((post)=>{
