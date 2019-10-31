@@ -1,6 +1,8 @@
 import React from "react";
 import {connect} from 'react-redux';
 import { likeThePost,commentOnPost, deletePost} from "../actions/jioFacebook";
+import {AiFillLike} from 'react-icons/ai';
+
 class JioFacebookPostItem extends React.Component{
   handleShareClick = () => {
     console.log("share");
